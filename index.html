@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A passionate developer showcasing projects, skills, and ways to connect.">
+    <title>Portfolio of a Passionate Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <!-- Add the hamburger icon -->
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav role="navigation">
+          <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate developer with experience in building web applications. I love coding and learning new technologies. Over the years, I have honed my skills in various programming languages and frameworks. I enjoy solving complex problems and turning ideas into reality through code. My journey in the tech world started with a curiosity for how things work, and it has grown into a fulfilling career. I am always eager to take on new challenges and collaborate with others to create impactful solutions.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="filter-buttons">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('web')">Web</button>
+                <button onclick="filterProjects('mobile')">Mobile</button>
+            </div>
+            <div class="projects-grid">
+                <article data-category="web">
+                    <div class="project-info">
+                        <h3>Web Project 1</h3>
+                        <img src="img/blue.png" alt="Example placeholder image for Web Project 1" onclick="openLightbox(this)">
+                        <p>Web Project 1 Description</p>
+                    </div>
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+                <article data-category="mobile">
+                    <div class="project-info">
+                        <h3>Mobile Project 1</h3>
+                        <img src="img/red.png" alt="Example placeholder image for Mobile Project 1" onclick="openLightbox(this)">
+                        <p>Mobile Project 1 Description</p>
+                    </div>
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <ul>
+                            <li>React Native</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+                <article data-category="web">
+                    <div class="project-info">
+                        <h3>Web Project 2</h3>
+                        <img src="img/green.png" alt="Example placeholder image for Web Project 2" onclick="openLightbox(this)">
+                        <p>Web Project 2 Description</p>
+                    </div>
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+                <article data-category="mobile">
+                    <div class="project-info">
+                        <h3>Mobile Project 2</h3>
+                        <img src="img/yellow.png" alt="Example placeholder image for Mobile Project 2" onclick="openLightbox(this)">
+                        <p>Mobile Project 2 Description</p>
+                    </div>
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <ul>
+                            <li>Flutter</li>
+                            <li>Dart</li>
+                        </ul>
+                    </div>
+                </article>
+                <article data-category="web">
+                    <div class="project-info">
+                        <h3>Web Project 3</h3>
+                        <img src="img/purple.png" alt="Example placeholder image for Web Project 3" onclick="openLightbox(this)">
+                        <p>Web Project 3 Description</p>
+                    </div>
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </article>
+                <article data-category="mobile">
+                    <div class="project-info">
+                        <h3>Mobile Project 3</h3>
+                        <img src="img/orange.png" alt="Example placeholder image for Mobile Project 3" onclick="openLightbox(this)">
+                        <p>Mobile Project 3 Description</p>
+                    </div>
+                    <div class="project-tech">
+                        <h4>Technologies Used:</h4>
+                        <ul>
+                            <li>Swift</li>
+                            <li>iOS</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        </div>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML &#128187;</li>
+                <li>CSS &#128188;</li>
+                <li>JavaScript &#128640;</li>
+                <li>React &#128187;</li>
+                <li>Node.js &#128187;</li>
+                <li>Python &#128013;</li>
+                <li>Java &#128187;</li>
+                <li>SQL &#128187;</li>
+                <li>Git &#128187;</li>
+                <li>Docker &#128187;</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form" action="submit_form.php" method="post" role="form" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="name-error"></span>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="email-error"></span>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error" id="message-error"></span>
+        
+                <button type="submit">Send</button>
+                <span class="success" id="form-success"></span>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
